@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
             val cardList: List<Int> = it.toList()
 
-            val pokerHand = determinePokerHand(cardList)
+            val pokerHand = jokbo_check(cardList)
             main.jokboText.text = "포커 족보: $pokerHand"
 
 
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             main.card22.setImageResource(res[4])
         })
     }
-    fun determinePokerHand(cards: List<Int>): String {
+    fun jokbo_check(cards: List<Int>): String {
         val counts = mutableMapOf<Int, Int>()
 
         for (card in cards) {
